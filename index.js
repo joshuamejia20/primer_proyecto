@@ -61,3 +61,5 @@ do{
     console.log("valor de x = " + x);
     x++;
 }while(x<10);
+
+console.log('prueba con el equipo');

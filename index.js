@@ -1,65 +1,71 @@
-//BUCLES
+//Arreglos
+//Contenedores para un conjunto de datos
 
-//FOR
-//for(inicializacion; condicion; iteracion){//code}
-/*
-for(let i=0; i<10; i++){
-    console.log("valor de I:" + i);
-}
+var arreglo = new Array(5);
 
-//NAN = Not A Number
-let numero = prompt("¿Qué número quieres iterar?");
-for (let i = 1; i <11; i++) {
-    console.log(numero + " X " + i + " = " + (numero*i));    
-}*/
+//console.log(arreglo);
 
-$(document).ready(function () {
-    $("#btn_enviar").click(()=>{
-        //let param = $("#numero").val();
-       // iterar($("#numero").val());
-    })
-});
-/*
-function iterar(numero){
-    for (let i = 1; i <11; i++) {
-        if(i == 5){
-            continue;
-        }
-        console.log(numero + " X " + i + " = " + (numero*i));    
-    }
-}*/
+const arreglo1 = ["Josue", 20, true];
 
-let dias = ["Lunes", "martes", "miercoles", "Jueves", "viernes"];
-/*
-for (let i = 0; i < dias.length; i++) {
-    console.log("valor de la posicion "+ i + " = " +dias[i]);
-}*/
+//console.log(arreglo1);
 
-//for in
-for(i in dias){
-    console.log("valor de la posicion "+ i + " = " +dias[i]);
-}
-//for of
-for(let dia of dias){
-    console.log(dia);
-}
-
-console.log('foreach');
-dias.forEach((dia, index)=>{
-    console.log("valor de la posicion "+ index + " = " +dia);
+arreglo1.forEach((valor, llave)=>{
+    //console.log("En la posicion "+llave + " el valor es: "+ valor);
 });
 
-//WHILE
-let x = 10;
-let tope = 10;
-while(x < tope){
-    console.log("valor de x = " + x);
-    x++;
+for(let i=0; i<arreglo1.length; i++){
+    //console.log("En la posicion "+i + " el valor es: "+ arreglo1[i]);
 }
 
-do{
-    console.log("valor de x = " + x);
-    x++;
-}while(x<10);
+let tabla = [];
 
-console.log('prueba con el equipo');
+for (let i = 1; i < 11; i++) {
+    tabla.push((5*i));
+}
+
+console.log(tabla);
+
+tabla.unshift("TABLA DEL 5");
+
+console.log(tabla);
+
+tabla.shift();
+
+console.log(tabla);
+
+tabla.pop();
+
+console.log(tabla);
+
+console.log(tabla.length);
+
+let arreglo_a = [1, 2, 3];
+let arreglo_b = [4, 5, 6];
+
+let arreglo_c = arreglo_a.concat(arreglo_b, [7,8,9]);
+console.log(arreglo_c);
+
+let saludo = ["hola", "estudiantes", "de", "ingenieria"];
+
+let union = saludo.join(" ");
+
+console.log(union);
+
+let separacion = union.split(" ");
+console.log(separacion);
+
+let reversa = arreglo_c.reverse();
+console.log(reversa);
+
+
+//objetos json
+//javascript object notation
+//son cadenas - utiles cuando se quiere transmitir datos por red. 
+//deben ser convertidas a un objeto nativo de javascript
+
+var curso = {
+    titulo: "javascript",
+    "catedratico": "Ing. Mejía"
+}
+
+console.log(curso.catedratico);

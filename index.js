@@ -1,71 +1,25 @@
-//Arreglos
-//Contenedores para un conjunto de datos
-
-var arreglo = new Array(5);
-
-//console.log(arreglo);
-
-const arreglo1 = ["Josue", 20, true];
-
-//console.log(arreglo1);
-
-arreglo1.forEach((valor, llave)=>{
-    //console.log("En la posicion "+llave + " el valor es: "+ valor);
+$(document).ready(function () {
+    $("#btn_enviar").click(()=>{
+        guardar_json();
+    });
 });
 
-for(let i=0; i<arreglo1.length; i++){
-    //console.log("En la posicion "+i + " el valor es: "+ arreglo1[i]);
-}
+function guardar_json(){
+    let mi_json = {
+        nombre: $("#nombre").val(),
+        apellido: $("#apellido").val(),
+        fecha: $("#fecha").val(),
+        profesion: $("#profesion").val()
+    }
 
-let tabla = [];
+    console.log("Hola, mi nombre es " + mi_json.nombre + " " + mi_json.apellido +"\n"+
+        "Mi fecha de nacimiento es " + mi_json.fecha + " y mi profesión es " + mi_json.profesion
+    );
 
-for (let i = 1; i < 11; i++) {
-    tabla.push((5*i));
-}
+    mi_json.saludo = prompt("Saluda de manera unica");
 
-console.log(tabla);
+    console.log(mi_json.saludo)
 
-tabla.unshift("TABLA DEL 5");
-
-console.log(tabla);
-
-tabla.shift();
-
-console.log(tabla);
-
-tabla.pop();
-
-console.log(tabla);
-
-console.log(tabla.length);
-
-let arreglo_a = [1, 2, 3];
-let arreglo_b = [4, 5, 6];
-
-let arreglo_c = arreglo_a.concat(arreglo_b, [7,8,9]);
-console.log(arreglo_c);
-
-let saludo = ["hola", "estudiantes", "de", "ingenieria"];
-
-let union = saludo.join(" ");
-
-console.log(union);
-
-let separacion = union.split(" ");
-console.log(separacion);
-
-let reversa = arreglo_c.reverse();
-console.log(reversa);
-
-
-//objetos json
-//javascript object notation
-//son cadenas - utiles cuando se quiere transmitir datos por red. 
-//deben ser convertidas a un objeto nativo de javascript
-
-var curso = {
-    titulo: "javascript",
-    "catedratico": "Ing. Mejía"
-}
-
-console.log(curso.catedratico);
+    delete mi_json.saludo;
+    console.log(mi_json);
+};

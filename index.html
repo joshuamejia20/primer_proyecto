@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primer Proyecto</title>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome-free-6.5.1-web/css/all.min.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Proyecto</title>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/fontawesome-free-6.5.1-web/css/all.min.css">
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
 </head>
+
 <body>
   <div class="jumbotron">
     <!--  aqui iran los formularios -->
     <form id="frm_registro" name="frm_registro" onsubmit="return false" autocomplete="off">
       <div class="form-row align-items-center">
-        <div class="col-md-12">
-          <label class="sr-only" for="inlineFormInput">Name</label>
+        <div class="col-md-6">
+          <label for="inlineFormInput">Nombres</label>
           <div class="input-group mb-2">
             <div class="input-group-prepend">
               <div class="input-group-text">
                 <i class="fas fa-user"></i>
               </div>
             </div>
-            <input type="number" class="form-control" name="numero" id="numero">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombres">
           </div>
         </div>
-        <!--<div class="col-md-6">
-          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+        <div class="col-md-6">
+          <label for="inlineFormInputGroup">Apellido</label>
           <div class="input-group mb-2">
             <div class="input-group-prepend">
               <div class="input-group-text">
-                <i class="fa-brands fa-facebook"></i>
+                <i class="fas fa-user"></i>
               </div>
             </div>
-            <input type="text" class="form-control" id="nombre_completo" placeholder="Username">
+            <input type="text" class="form-control" id="apellido" placeholder="Apellidos">
           </div>
-        </div>-->
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-md-6">
+          <label for="inlineFormInput">Fecha de Nacimiento</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-calendar"></i>
+              </div>
+            </div>
+            <input type="date" class="form-control" name="fecha" id="fecha" placeholder="__/__/____">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inlineFormInputGroup">Profesion</label>
+          <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="profesion" placeholder="Profesion">
+          </div>
+        </div>
       </div>
       <div class="form-row align-items-center mt-3">
         <div class="col-md-12">
-          <button type="submit" class="btn btn-primary mb-2 btn-block" id="btn_enviar">Calcular</button>
+          <button type="submit" class="btn btn-primary mb-2 btn-block" id="btn_enviar">
+            <i class="fas fa-save"></i> Guardar
+          </button>
         </div>
       </div>
     </form>
   </div>
   <script src="index.js"></script>
 </body>
+
 </html>
